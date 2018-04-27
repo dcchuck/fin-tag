@@ -13,7 +13,7 @@ Load the javascript file either as a module or script tag. Then add a `data-mani
 
 #### Node Module
 ```js
-const enableFinTags = require('fin-tags');
+const enableFinTags = require('fin-tag');
 enableFinTags();
 ```
 
