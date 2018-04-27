@@ -6,8 +6,16 @@
   "repository": "https://github.com/dcchuck/fin-tag",
   "author": "dcchuck <chuck.danielsson@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode=production",
+	"dev-build": "webpack --mode=development"
+  },
   "private": false,
   "dependencies": {
     "custom-protocol-detection": "^1.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
   }
 }
