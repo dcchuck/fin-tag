@@ -1,0 +1,13 @@
+{
+  "name": "fin-tag",
+  "version": "0.1.0",
+  "description": "Create fin or fins tags in a webpage to open your app on OpenFin if the RVM is available.",
+  "main": "index.js",
+  "repository": "https://github.com/dcchuck/fin-tag",
+  "author": "dcchuck <chuck.danielsson@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "custom-protocol-detection": "^1.0.0"
+  }
+}
