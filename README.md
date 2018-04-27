@@ -8,7 +8,7 @@ Give anchor tags to your web application the ability to launch the OpenFin power
 
 Load the javascript file either as a module or script tag. Then add a `data-manifest` attribute to your anchor elements
 ```html
-<a href="http://yourwebapp.com" data-manifest="http://app.json">Launch</a>
+<a href="https://yourwebapp.com" data-manifest="fins://app.json">Launch</a>
 ```
 
 #### Node Module
