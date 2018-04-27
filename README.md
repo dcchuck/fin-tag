@@ -26,4 +26,4 @@ npm run build
 
 The hostable javascript file will be in the `dist` directory.
 
-For your convenience, the file is hosted via [gh-page](http://dcchuck.github.io/fin-tag/dist/fin-tag.js)
+For your convenience, the file is hosted via [gh-pages](http://dcchuck.github.io/fin-tag/dist/fin-tag.js)
