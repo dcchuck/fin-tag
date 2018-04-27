@@ -1,16 +1,19 @@
 const customProtocolDetection = require('custom-protocol-detection');
 
-const finTags = Array.from(document.getElementsByClassName('fin'));
-const finsTags = Array.from(document.getElementsByClassName('fins'));
-const allTags = finTags.concat(finsTags);
+function enableFinTags() {
+	const allTags = Array.from(document.querySelectorAll('a[data-manifest]'));
 
-for (let i = 0; i < allTags.length; i++) {
-	allTags[i].onclick  = (event) => {
-		const href = event.target.href;
-		customProtocolDetection(href, () => {
-			window.location = href.replace(/^.{3}/g, 'http');
-		});
-		event.preventDefault ? event.preventDefault() : event.returnValue = false;
+	for (let i = 0; i < allTags.length; i++) {
+		allTags[i].onclick  = (event) => {
+			event.preventDefault ? event.preventDefault() : event.returnValue = false;
+			const manifestUrl = event.target.dataset.manifest;
+			customProtocolDetection(manifestUrl, () => {
+				window.location.href = event.target.href;
+			}, () => {
+				console.log('RVM Available - Application Launched!');
+			});
+		}
 	}
 }
 
+module.exports = enableFinTags;

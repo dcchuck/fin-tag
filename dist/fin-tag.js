@@ -1,1 +1,107 @@
-!function(e){var n={};function t(o){if(n[o])return n[o].exports;var r=n[o]={i:o,l:!1,exports:{}};return e[o].call(r.exports,r,r.exports,t),r.l=!0,r.exports}t.m=e,t.c=n,t.d=function(e,n,o){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:o})},t.r=function(e){Object.defineProperty(e,"__esModule",{value:!0})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},t.p="",t(t.s=1)}([function(e,n){function t(e,n,t){return e.addEventListener?(e.addEventListener(n,t),{remove:function(){e.removeEventListener(n,t)}}):(e.attachEvent(n,t),{remove:function(){e.detachEvent(n,t)}})}function o(e,n){var t=document.createElement("iframe");return t.src=n,t.id="hiddenIframe",t.style.display="none",e.appendChild(t),t}function r(e,n,r){10===i()?function(e,n,t){var r=setTimeout(n,1e3);window.addEventListener("blur",function(){clearTimeout(r),t()});var i=document.querySelector("#hiddenIframe");i||(i=o(document.body,"about:blank"));try{i.contentWindow.location.href=e}catch(e){n(),clearTimeout(r)}}(e,n,r):9===i()||11===i()?function(e,n,r){var i=setTimeout(function(){n(),c.remove()},1e3),a=document.querySelector("#hiddenIframe");a||(a=o(document.body,"about:blank"));var c=t(window,"blur",function(){clearTimeout(i),c.remove(),r()});a.contentWindow.location.href=e}(e,n,r):function(e,n,t){var o=window.open("","","width=0,height=0");o.document.write("<iframe src='"+e+"'></iframe>"),setTimeout(function(){try{o.location.href,o.setTimeout("window.close()",1e3),t()}catch(e){o.close(),n()}},1e3)}(e,n,r)}function i(){var e=-1;if("Microsoft Internet Explorer"===navigator.appName){var n=navigator.userAgent;null!=new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})").exec(n)&&(e=parseFloat(RegExp.$1))}else if("Netscape"===navigator.appName){n=navigator.userAgent;null!=new RegExp("Trident/.*rv:([0-9]{1,}[.0-9]{0,})").exec(n)&&(e=parseFloat(RegExp.$1))}return e}e.exports=function(e,n,i){function a(){n&&n()}function c(){i&&i()}if(navigator.msLaunchUri)!function(e,n,t){navigator.msLaunchUri(e,t,n)}(e,n,i);else{var u={isOpera:f=!!window.opera||navigator.userAgent.indexOf(" OPR/")>=0,isFirefox:"undefined"!=typeof InstallTrigger,isSafari:Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor")>0,isChrome:!!window.chrome&&!f,isIE:!!document.documentMode};u.isFirefox?function(e,n,t){var r=document.querySelector("#hiddenIframe");r||(r=o(document.body,"about:blank"));try{r.contentWindow.location.href=e,t()}catch(e){"NS_ERROR_UNKNOWN_PROTOCOL"==e.name&&n()}}(e,a,c):u.isChrome?function(e,n,o){for(var r=setTimeout(function(){n(),a.remove()},1e3),i=window;i!=i.parent;)i=i.parent;var a=t(i,"blur",function(){clearTimeout(r),a.remove(),o()});window.location=e}(e,a,c):u.isIE&&r(e,a,c)}var f}},function(e,n,t){const o=t(0),r=Array.from(document.getElementsByClassName("fin")),i=Array.from(document.getElementsByClassName("fins")),a=r.concat(i);for(let e=0;e<a.length;e++)a[e].onclick=(e=>{const n=e.target.href;o(n,()=>{window.location=n.replace(/^.{3}/g,"http")}),e.preventDefault?e.preventDefault():e.returnValue=!1})}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./builder.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./builder.js":
+/*!********************!*\
+  !*** ./builder.js ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const enableFinTags = __webpack_require__(/*! ./ */ \"./index.js\");\n\nenableFinTags();\n\n\n//# sourceURL=webpack:///./builder.js?");
+
+/***/ }),
+
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const customProtocolDetection = __webpack_require__(/*! custom-protocol-detection */ \"./node_modules/custom-protocol-detection/index.js\");\n\nfunction enableFinTags() {\n\tconst allTags = Array.from(document.querySelectorAll('a[data-manifest]'));\n\n\tfor (let i = 0; i < allTags.length; i++) {\n\t\tallTags[i].onclick  = (event) => {\n\t\t\tevent.preventDefault ? event.preventDefault() : event.returnValue = false;\n\t\t\tconst manifestUrl = event.target.dataset.manifest;\n\t\t\tcustomProtocolDetection(manifestUrl, () => {\n\t\t\t\twindow.location.href = event.target.href;\n\t\t\t}, () => {\n\t\t\t\tconsole.log('RVM Available - Application Launched!');\n\t\t\t});\n\t\t}\n\t}\n}\n\nmodule.exports = enableFinTags;\n\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/custom-protocol-detection/index.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/custom-protocol-detection/index.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _registerEvent(target, eventType, cb) {\r\n    if (target.addEventListener) {\r\n        target.addEventListener(eventType, cb);\r\n        return {\r\n            remove: function () {\r\n                target.removeEventListener(eventType, cb);\r\n            }\r\n        };\r\n    } else {\r\n        target.attachEvent(eventType, cb);\r\n        return {\r\n            remove: function () {\r\n                target.detachEvent(eventType, cb);\r\n            }\r\n        };\r\n    }\r\n}\r\n\r\nfunction _createHiddenIframe(target, uri) {\r\n    var iframe = document.createElement(\"iframe\");\r\n    iframe.src = uri;\r\n    iframe.id = \"hiddenIframe\";\r\n    iframe.style.display = \"none\";\r\n    target.appendChild(iframe);\r\n\r\n    return iframe;\r\n}\r\n\r\nfunction openUriWithHiddenFrame(uri, failCb, successCb) {\r\n\r\n    var timeout = setTimeout(function () {\r\n        failCb();\r\n        handler.remove();\r\n    }, 1000);\r\n\r\n    var iframe = document.querySelector(\"#hiddenIframe\");\r\n    if (!iframe) {\r\n        iframe = _createHiddenIframe(document.body, \"about:blank\");\r\n    }\r\n\r\n    var handler = _registerEvent(window, \"blur\", onBlur);\r\n\r\n    function onBlur() {\r\n        clearTimeout(timeout);\r\n        handler.remove();\r\n        successCb();\r\n    }\r\n\r\n    iframe.contentWindow.location.href = uri;\r\n}\r\n\r\nfunction openUriWithTimeoutHack(uri, failCb, successCb) {\r\n    \r\n    var timeout = setTimeout(function () {\r\n        failCb();\r\n        handler.remove();\r\n    }, 1000);\r\n\r\n    //handle page running in an iframe (blur must be registered with top level window)\r\n    var target = window;\r\n    while (target != target.parent) {\r\n        target = target.parent;\r\n    }\r\n\r\n    var handler = _registerEvent(target, \"blur\", onBlur);\r\n\r\n    function onBlur() {\r\n        clearTimeout(timeout);\r\n        handler.remove();\r\n        successCb();\r\n    }\r\n\r\n    window.location = uri;\r\n}\r\n\r\nfunction openUriUsingFirefox(uri, failCb, successCb) {\r\n    var iframe = document.querySelector(\"#hiddenIframe\");\r\n\r\n    if (!iframe) {\r\n        iframe = _createHiddenIframe(document.body, \"about:blank\");\r\n    }\r\n\r\n    try {\r\n        iframe.contentWindow.location.href = uri;\r\n        successCb();\r\n    } catch (e) {\r\n        if (e.name == \"NS_ERROR_UNKNOWN_PROTOCOL\") {\r\n            failCb();\r\n        }\r\n    }\r\n}\r\n\r\nfunction openUriUsingIEInOlderWindows(uri, failCb, successCb) {\r\n    if (getInternetExplorerVersion() === 10) {\r\n        openUriUsingIE10InWindows7(uri, failCb, successCb);\r\n    } else if (getInternetExplorerVersion() === 9 || getInternetExplorerVersion() === 11) {\r\n        openUriWithHiddenFrame(uri, failCb, successCb);\r\n    } else {\r\n        openUriInNewWindowHack(uri, failCb, successCb);\r\n    }\r\n}\r\n\r\nfunction openUriUsingIE10InWindows7(uri, failCb, successCb) {\r\n    var timeout = setTimeout(failCb, 1000);\r\n    window.addEventListener(\"blur\", function () {\r\n        clearTimeout(timeout);\r\n        successCb();\r\n    });\r\n\r\n    var iframe = document.querySelector(\"#hiddenIframe\");\r\n    if (!iframe) {\r\n        iframe = _createHiddenIframe(document.body, \"about:blank\");\r\n    }\r\n    try {\r\n        iframe.contentWindow.location.href = uri;\r\n    } catch (e) {\r\n        failCb();\r\n        clearTimeout(timeout);\r\n    }\r\n}\r\n\r\nfunction openUriInNewWindowHack(uri, failCb, successCb) {\r\n    var myWindow = window.open('', '', 'width=0,height=0');\r\n\r\n    myWindow.document.write(\"<iframe src='\" + uri + \"'></iframe>\");\r\n\r\n    setTimeout(function () {\r\n        try {\r\n            myWindow.location.href;\r\n            myWindow.setTimeout(\"window.close()\", 1000);\r\n            successCb();\r\n        } catch (e) {\r\n            myWindow.close();\r\n            failCb();\r\n        }\r\n    }, 1000);\r\n}\r\n\r\nfunction openUriWithMsLaunchUri(uri, failCb, successCb) {\r\n    navigator.msLaunchUri(uri,\r\n        successCb,\r\n        failCb\r\n    );\r\n}\r\n\r\nfunction checkBrowser() {\r\n    var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;\r\n    return {\r\n        isOpera   : isOpera,\r\n        isFirefox : typeof InstallTrigger !== 'undefined',\r\n        isSafari  : Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0,\r\n        isChrome  : !!window.chrome && !isOpera,\r\n        isIE      : /*@cc_on!@*/false || !!document.documentMode // At least IE6\r\n    }\r\n}\r\n\r\nfunction getInternetExplorerVersion() {\r\n    var rv = -1;\r\n    if (navigator.appName === \"Microsoft Internet Explorer\") {\r\n        var ua = navigator.userAgent;\r\n        var re = new RegExp(\"MSIE ([0-9]{1,}[\\.0-9]{0,})\");\r\n        if (re.exec(ua) != null)\r\n            rv = parseFloat(RegExp.$1);\r\n    }\r\n    else if (navigator.appName === \"Netscape\") {\r\n        var ua = navigator.userAgent;\r\n        var re = new RegExp(\"Trident/.*rv:([0-9]{1,}[\\.0-9]{0,})\");\r\n        if (re.exec(ua) != null) {\r\n            rv = parseFloat(RegExp.$1);\r\n        }\r\n    }\r\n    return rv;\r\n}\r\n\r\nmodule.exports = function(uri, failCb, successCb) {\r\n    function failCallback() {\r\n        failCb && failCb();\r\n    }\r\n\r\n    function successCallback() {\r\n        successCb && successCb();\r\n    }\r\n\r\n    if (navigator.msLaunchUri) { //for IE and Edge in Win 8 and Win 10\r\n        openUriWithMsLaunchUri(uri, failCb, successCb);\r\n    } else {\r\n        var browser = checkBrowser();\r\n\r\n        if (browser.isFirefox) {\r\n            openUriUsingFirefox(uri, failCallback, successCallback);\r\n        } else if (browser.isChrome) {\r\n            openUriWithTimeoutHack(uri, failCallback, successCallback);\r\n        } else if (browser.isIE) {\r\n            openUriUsingIEInOlderWindows(uri, failCallback, successCallback);\r\n        } else {\r\n            //not supported, implement please\r\n        }\r\n    }\r\n}\r\n\n\n//# sourceURL=webpack:///./node_modules/custom-protocol-detection/index.js?");
+
+/***/ })
+
+/******/ });
