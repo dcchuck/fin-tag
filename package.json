@@ -12,10 +12,10 @@
   },
   "private": false,
   "dependencies": {
-    "custom-protocol-detection": "^1.0.0"
+    "custom-protocol-detection": "1.0.1"
   },
   "devDependencies": {
-    "webpack": "^4.6.0",
-    "webpack-cli": "^3.3.10"
+    "webpack": "5.75.0",
+    "webpack-cli": "5.0.0"
   }
 }
